@@ -1,5 +1,4 @@
-import React from 'react'
-import house from '../pics/house.jpg'
+import house from '../../public/assets/house/house.jpg'
 
 const Home = () => {
   return (
