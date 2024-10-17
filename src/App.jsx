@@ -9,7 +9,7 @@ function App() {
       <Navbar/>
       <div className='flex justify-center items-center mt-10'>
       <Home/>
-      <HousePage/>
+      {/* <HousePage/> */}
     </div>
     </div>
   )
