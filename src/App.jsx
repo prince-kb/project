@@ -1,16 +1,12 @@
 import Navbar from './components/Navbar'
-import Home from './components/Home'
-import HousePage from './components/HousePage'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <div className=''>
       <Navbar/>
-      <div className='flex justify-center items-center mt-10'>
-      <Home/>
-      {/* <HousePage/> */}
-    </div>
+      <Outlet/>
     </div>
   )
 }

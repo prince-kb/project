@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { acLogo, cross, menuBurger } from '../navComponent'
+import { acLogo, cross, menuBurger } from '../../public/navComponent'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -7,12 +8,13 @@ const Navbar = () => {
         setToggle(!toggle);
     }
     const navLinks = [
-      {href:"#home", label:"Home"},
-      {href:"#about-me", label:"About Me"},
-      {href:"#services", label:"Services"},
-      {href:"#projects", label:"Projects"},
-      {href:"#contact", label:"Contact"}
+      {href:"", label:"Home"},
+      {href:"about", label:"About Me"},
+      {href:"/services", label:"Services"},
+      {href:"/projects", label:"Projects"},
+      {href:"/contact", label:"Contact"}
   ]
+
   return (
     <header className='bg-white border-b-2'>
         <div className={toggle?'transition-[height] ease-in-out delay-150 h-[100vh]':'transition-[height] ease-in-out delay-150 h-auto'}>
@@ -25,7 +27,7 @@ const Navbar = () => {
                 </div>
                 <ul className={toggle?'flex flex-col justify-center items-center h-full absolute top-0 bottom-0 left-0 right-0':'hidden md:flex-auto md:flex md:justify-end md:items-center md:gap-16'}>
                     {navLinks.map((item) => (
-                        <li key={item.label} className='py-4'><a href={item.href} className='text-gray-700 hover:text-black'>{item.label}</a></li>
+                        <li key={item.label} className='py-4'><Link to={item.href} className='text-gray-700 hover:text-black'>{item.label}</Link></li>
                     ))}
                 </ul>
             </nav>
