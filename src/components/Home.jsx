@@ -1,7 +1,7 @@
 import house from '../../public/assets/house/house10.jpg'
 import flat from '../../public/assets/flate/flat.jpg'
 import shop from '../../public/assets/shop/Store.jpg'
-import garage from '../../public/assets/Garage/garage.jpg'
+import garage from '../../public/assets/garage/garage.jpg'
 
 const Home = () => {
   return (
