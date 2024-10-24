@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { acLogo, cross, menuBurger } from '../../public/navComponent'
+import { acLogo, cross, menuBurger } from '../navComponent'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
