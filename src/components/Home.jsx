@@ -6,7 +6,7 @@ import Banners from './Banners'
 
 const Home = () => {
   return (
-    <div className='w-full'>
+    <div className='w-full '>
       <Banners/>
       <h1 className='text-2xl text-center font-semibold mt-4'>Browse Popular Categories</h1>
       <div className='flex flex-col md:flex-row justify-around my-10 px-4 md:px-0'>

@@ -16,7 +16,7 @@ const Navbar = () => {
   ]
 
   return (
-    <header className='bg-white border-b-2'>
+    <header className=' bg-white border-b-2'>
         <div className={toggle?'transition-[height] ease-in-out delay-150 h-[100vh]':'transition-[height] ease-in-out delay-150 h-auto'}>
             <nav className='container mx-auto px-4 py-4 md:px-0 md:flex' >
                 <div className='flex justify-between items-center'>
