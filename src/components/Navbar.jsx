@@ -21,11 +21,11 @@ const Navbar = () => {
                 <nav className='container mx-auto px-4 py-4 md:px-0 md:flex'>
                     <div className='flex justify-between items-center'>
                         <a href="/" className='ml-4'>
-                            <div className='w-16 h-16 rounded-full overflow-hidden'> {/* Decreased size of the logo */}
+                            <div className='w-16 h-16 rounded-full overflow-hidden'> 
                                 <img 
                                     src={logo} 
                                     alt="Logo" 
-                                    className='w-full h-full object-cover' // Keeps the image filling the container properly
+                                    className='w-full h-full object-cover' 
                                 />
                             </div>
                         </a>
