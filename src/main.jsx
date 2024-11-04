@@ -6,6 +6,8 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Contact from './components/Contact.jsx';
 import Services from './components/Services.jsx';
 import Home from './components/Home.jsx';
+import HouseRent from './components/HouseRent.jsx';
+import HouseSale from './components/HouseSale.jsx';
 
 const router = createHashRouter([
     {
@@ -27,7 +29,15 @@ const router = createHashRouter([
             {
                 path : ":id",
                 element : <div>Nothing here! Try routing using navbar</div>
-            }
+            },
+            {
+                path : "/renthouse",
+                element : <HouseRent/>
+            },
+            {
+                path : "/salehouse",
+                element : <HouseSale/>
+            },
         ]
     }
 ])

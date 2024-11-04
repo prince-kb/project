@@ -8,28 +8,26 @@ import banner6 from "../assets/banner/banner6.jpg";
 
 const Banners = () => {
   const [n, setN] = useState(0);
-  const bannerList = [banner1, banner2, banner3, banner4, banner5, banner6];
+  const banners = [banner1, banner2, banner3, banner4, banner5, banner6];
 
   useEffect(() => {
-    const set = () =>
-      setTimeout(() => {
-        setN((n + 1) % bannerList.length);
-      }, 4000);
-    set();
-    return set;
-  });
+    const interval = setInterval(() => n === banners.length - 1 ? setN(0) : setN(n + 1), 3500)
+    return () => clearInterval(interval);
+  })
 
   return (
-    <div className="relative h-[50vh] md:h-[35vh] lg:h-[28vh]">
-      <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-[50%] md:h-[30%] lg:h-[25%] my-3 mx-auto w-[90%] md:w-[70%] lg:w-1/2 flex justify-center items-center ">
-        <img  src={bannerList[n]}  alt="b1" className=" my-4 bg-red-300 rounded-2xl mx-auto bg-contain max-h-1/3 w-[90%] md:w-[65%] lg:w-[50%] transition-all"/>
-      </div>
-      <div className="absolute flex gap-2 mb-6 left-1/2 -translate-x-1/2 bottom-2 items-center">
-        {bannerList.map((i, index) => {
-          return <div key={index} onClick={()=>setN(index)} className={`transition-all cursor-pointer rounded-full ${n===index ? 'bg-red-400 h-4 w-4' : 'bg-blue-100 h-3 w-3'}`}></div>;
-        })}
+    <div  className={` bannerss mx-auto mt-4 lg:mt-8 h-[18vh] md:h-[30vh] lg:h-[40vh] xl:w-[40vw] w-[60vw] rounded-3xl bg-green-200 relative flex justify-center items-end`}>
+    {banners && banners.length > 0 && banners.map((banner, index) => (
+      <img src={banners[index]} key={index} alt="Banner" className={` h-full w-[100%] rounded-3xl absolute transition-all duration-500 neu2 border-l-4 lg:border-b-8 lg:border-l-8 border-b-4 ${index === n ? ' z-[2]' : index === (n + 1) % banners.length ? ' -translate-x-2 translate-y-2 lg:-translate-x-4 lg:translate-y-4 z-[1] ' : '-translate-x-4 translate-y-4 lg:-translate-x-8 lg:translate-y-8 z-[0]'} `} />
+    ))}
+    <div className="flex bg-red-800 mx-6 my-10 ">
+      <div className="flex mb-2 md:mb-4 lg:mb-6 gap-3 md:gap-4 lg:gap-6 items-center">
+        {banners && banners.length > 0 && banners.map((banner, index) => (
+          <div key={index} className={`${n === index ? "lg:h-6 lg:w-6 md:w-4 md:h-4 h-2 w-2" : "lg:h-4 lg:w-4 md:h-2 md:w-2 h-1 w-1"} rounded-full ${n == index ? "bg-orange" : "bg-brown"} cursor-pointer transition-all`} onClick={() => setN(index)}></div>
+        ))}
       </div>
     </div>
+  </div>
   );
 };
 
