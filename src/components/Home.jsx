@@ -22,17 +22,27 @@ const Home = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           {/* City Input */}
           <div>
-            <label htmlFor="city" className='block text-gray-700 mb-2'>City</label>
-            <input type="text" id="city" className='border rounded w-full py-2 px-3' placeholder="Enter city" />
+          <label htmlFor="cityType" className='block text-gray-700 mb-2'>City</label>
+            <select id="cityType" className='border rounded w-full py-2 px-3'>
+              <option value="" disabled selected>Select type</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Pune">Pune</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Lucknow">Lucknow</option>
+
+            </select>
           </div>
           {/* Property Type Selection */}
           <div>
-            <label htmlFor="propertyType" className='block text-gray-700 mb-2'>Type</label>
+            <label htmlFor="propertyType" className='block text-gray-700 mb-2'>PropertyType</label>
             <select id="propertyType" className='border rounded w-full py-2 px-3'>
               <option value="" disabled selected>Select type</option>
               <option value="house">House</option>
               <option value="flat">Flat</option>
               <option value="garage">Garage</option>
+              <option value="shop">Shop</option>
             </select>
           </div>
           {/* Price Selection with Search Button */}
