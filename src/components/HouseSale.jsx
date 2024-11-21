@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import housesale from "../constants/houserent";
+import {housesale} from "../constants/houseconstants";
 
 
 

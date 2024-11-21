@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import houserent from "../constants/houserent";
-
+import { houserent } from "../constants/houseconstants";
 
 
 const HouseRent = () => {
