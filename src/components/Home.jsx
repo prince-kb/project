@@ -15,52 +15,7 @@ const Home = () => {
       
       <div className='container mx-auto px-4 py-8 mt-4'>
         <h2 className='text-xl font-bold mb-4 text-center'>Search Listings</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          {/* City Input */}
-          <div>
-          <label htmlFor="cityType" className='block text-gray-700 mb-2'>City</label>
-            <select id="cityType" className='border rounded w-full py-2 px-3'>
-              <option value="" disabled selected>Select type</option>
-              <option value="Kolkata">Kolkata</option>
-              <option value="Bangalore">Bangalore</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Pune">Pune</option>
-              <option value="Hyderabad">Hyderabad</option>
-              <option value="Lucknow">Lucknow</option>
 
-            </select>
-          </div>
-          {/* Property Type Selection */}
-          <div>
-            <label htmlFor="propertyType" className='block text-gray-700 mb-2'>Type</label>
-            <select id="propertyType" className='border rounded w-full py-2 px-3'>
-              <option value="" disabled selected>Select type</option>
-              <option value="house">House</option>
-              <option value="flat">Flat</option>
-              <option value="garage">Garage</option>
-              <option value="shop">Shop</option>
-            </select>
-          </div>
-          {/* Price Selection with Search Button */}
-          <div className='flex items-start md:col-span-1'>
-            <div className='w-full mb-0'>
-              <label htmlFor="price" className='block text-gray-700 mb-2'>Price</label>
-              <select id="price" className='border rounded w-full py-2 px-3'>
-                <option value="" disabled selected>Select price</option>
-                <option value="0-100000">Under $100,000</option>
-                <option value="100001-300000">$100,001 - $300,000</option>
-                <option value="300001-500000">$300,001 - $500,000</option>
-                <option value="500001">Over $500,000</option>
-              </select>
-            </div>
-            {/* Search Button */}
-            <div className='ml-2 mt-4'>
-              <button className='bg-amber-600 text-white font-semibold py-2 px-4 rounded hover:bg-amber-500 transition duration-200 mt-4'>
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       <h1 className='text-2xl text-center font-semibold lg:text-3xl mt-6 md:mt-8 lg:mt-10 text-amber-800'>
