@@ -7,7 +7,7 @@ import h6 from "../assets/houserent/h6.jpg";
 import h7 from "../assets/houserent/h7.jpg";
 import h8 from "../assets/houserent/h8.jpg";
 import h9 from "../assets/houserent/h9.jpg";
-import h10 from "../assets/houserent/h10.avif";
+import h10 from "../assets/houserent/h10.jpg";
 
 const houserent = [
   { img: h1, des: "Luxurious villa with a garden and pool.", minPrice: "15000", maxPrice: "20000", loc: "Delhi", type: "2BHK" },

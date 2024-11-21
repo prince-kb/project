@@ -40,7 +40,7 @@ const Navbar = () => {
                     <ul className={toggle ? 'flex flex-col justify-center items-center h-full absolute top-0 bottom-0 left-0 right-0' : 'hidden md:flex-auto md:flex md:justify-end md:items-center md:gap-16'}>
                         {navLinks.map((item) => (
                             <li key={item.label} className='py-4'>
-                                <Link to={item.href} className='text-gray-700 hover:text-black'>{item.label}</Link>
+                                <Link to={item.href} className='text-gray-700 hover:font-bold transition-all'>{item.label}</Link>
                             </li>
                         ))}
                     </ul>
