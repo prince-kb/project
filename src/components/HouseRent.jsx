@@ -1,60 +1,41 @@
 import React from "react";
-import h1 from "../assets/houserent/h1.jpg";
 import houserent from "../constants/houserent";
 
 const HouseRent = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className=" w-[30vw] rounded-xl bg-white flex flex-col  shadow-lg transition-all duration-200 ease-out hover:scale-105 hover:-translate-y-2 cursor-pointer border">
-        {houserent.map((pack) => (
-          <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-4 w-full max-w-4xl">
+        {houserent.map((pack, index) => (
+          <div
+            key={index}
+            className="rounded-lg bg-white shadow-md overflow-hidden transition-transform duration-200 hover:scale-105 border"
+          >
             <img
-              // src={pack.img}
-              src={h1}
-              className="w-[80vw] md:w-[40vw] lg:w-[30vw] "
-            ></img>
-            <div className="">
-              <h1 className=" flex px-2 text-xl justify-center items-center">
+              src={pack.img} 
+              alt={pack.des}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-4">
+              <h1 className="text-lg font-semibold text-center mb-2">
                 {pack.des}
               </h1>
-              <div className="flex gap-9 px-2 justify-center text-xl mt-4">
-                <div className="flex items-center justify-center flex-col">
-                  <h1>{pack.loc}</h1>
-                  <p>kolkata</p>
+              <div className="flex justify-around text-center text-sm">
+                <div>
+                  <h2 className="font-medium">Location</h2>
+                  <p>{pack.loc}</p>
                 </div>
-                <div className="flex items-center justify-center flex-col">
-                  <h1>{pack.price}</h1>
-                  <p>20000-25000</p>
+                <div>
+                  <h2 className="font-medium">Price</h2>
+                  <p>{pack.price}</p>
                 </div>
-                <div className="flex items-center justify-center flex-col">
-                  <h1>{pack.type}</h1>
-                  <p>2-4BHK</p>
+                <div>
+                  <h2 className="font-medium">Type</h2>
+                  <p>{pack.type}</p>
                 </div>
               </div>
             </div>
-             ̰
           </div>
         ))}
-
-        {/* <img src={h1} className='w-[80vw] md:w-[40vw] lg:w-[30vw] ' ></img>
-       <div  className=''>
-        <h1 className=' flex px-2 text-xl justify-center items-center'>Description</h1>
-        <div className='flex gap-9 px-2 justify-center text-xl mt-4'>
-        <div className='flex items-center justify-center flex-col'>
-        <h1>Location</h1>
-        <p>kolkata</p>        
-        </div>
-        <div className='flex items-center justify-center flex-col'>
-        <h1>Price</h1>
-        <p>20000-25000</p>
-        </div>
-        <div className='flex items-center justify-center flex-col'>
-        <h1>Type Of</h1>
-        <p>2-4BHK</p>
-        </div>
-        </div>
-        
-         </div> */}
       </div>
     </div>
   );
